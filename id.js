@@ -1,15 +1,33 @@
-<!--id.face 孵化 draw.face 让每个人都触手开放 融入生活 作者邮箱:844936334@qq.com-->
+//id.face
 
-<title>城门</title>
-<link rel="shortcut icon" href="http://47.97.64.181/quxiji/apk/id/men.svg">
-<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"><!--界面 缩放-->
+// 创建 style 元素
+var style = document.createElement('style');
+// 将 <style> 元素添加到页面头部
+document.head.appendChild(style);
 
+// 获取样式表对象
+var sheet = style.sheet;
 
-<script id="id_men_js">
-   
+// 添加样式
+sheet.insertRule('.bolck{}');
+sheet.insertRule('.class_box{left:0px;right:0px;top:0px;bottom:0px;height:100%;width:100%;z-index:-1;border-radius:0px 0px 0px 0px;border:0px solid #ffffff;background:rgba(00,00,00,0);color:rgba(00,00,00,0);display:block;}');
+sheet.insertRule('.class_box_beijing {absolute:absolute;position:fixed;left:0px;right:0px;top:0px;bottom:0px;height:;width:;z-index:0;border-radius:0px 0px 0px 0px;border:0px solid #ffffff;background:rgba(00,00,00,1);color:rgba(00,00,00,1);display:block;}');
+sheet.insertRule('.class_box_form {background:rgba(0,0,0,1);background-size:100%;color:rgba(255,255,255,1);}');
+sheet.insertRule('.class_box_yaogan{absolute:absolute;position:fixed;min-left:5px;min-right:5px;min-top:5px;min-bottom:5px;max-height:50%;max-width:90%;z-index:11;border-radius:5px;border:0px solid rgba(250,250,250,0);box-shadow: 1px 2px 3px rgba(230,230,230,1);background:rgba(0,0,0,0);color:rgba(00,00,00,1);overflow:auto;display:block;}');
+sheet.insertRule('.class_box_text,.class_iframe_data,.class_anjian_tijiao,.class_tool,.class_tool_add,.class_tool_textarea,.class_add_data,.class_add_iframe_data{position:relative;   left:;right:;top:;bottom:;height:;width:;max-width:96%;z-index:1;border-radius:5px 5px 5px 5px;border:2px solid rgba(250,250,250,0);margin:3px;box-shadow: 1px 2px 3px rgba(200,200,200,1);background:rgba(00,00,00,1);color:rgba(255,255,255,1);outline:none;line-height: 15px;font-size:13px;overflow:auto;resize:none;display:block;}');
+sheet.insertRule('.class_box_draw{absolute:absolute;position:fixed;z-index:9;border-radius:5px;border:0px solid rgba(250,250,250,0);box-shadow: 1px 2px 3px rgba(230,230,230,1);background:rgba(0,0,0,0);color:rgba(00,00,00,1);overflow:auto;display:block;}');
+sheet.insertRule(':root{ --tishi-color: rgba(255,000,000,1); }');
+sheet.insertRule('.class_tool:hover{ color: var(--tishi-color); box-shadow: 1px 2px 3px rgba(255,000,000,1); }');
+sheet.insertRule('.class_tool_add{left:;z-index:2;max-width:calc(96%); margin:3px 3px 3px 3px; pointer-events:auto;}');
+sheet.insertRule('.class_form,.class_anjian_tijiao{display:none;}');
+sheet.insertRule('.class_iframe_data{background:rgba(50,50,50,1);display:none;}');
+sheet.insertRule('.class_box_add{absolute:absolute;position:fixed; left:1%;right:1%;top:1%;min-bottom:1%;max-height:98%;width:98%;background:rgba(0,0,0,0);color:rgba(0,0,0,0);overflow:auto;display:block;}');
+sheet.insertRule('.class_add_data{absolute:absolute;left:0%;right:0%;height:400px;width:100%;z-index:1;border-width: 0px 0px 0px 0px;border-style:solid;border-color: rgba(250,250,250,1);box-shadow:1px 2px 3px rgba(255,255,
+                 
 var data_get=""
 var translate_data = "close";
 var translate_text = "";
+
 
 /*问题 选取卡顿 参考https://rbyers.github.io/scroll-latency.html*/
 //入口 点击
@@ -358,33 +376,4 @@ var clickTimer = null;
 function _onclick(who){  if(clickTimer) { window.clearTimeout(clickTimer); clickTimer = null; } clickTimer = window.setTimeout(function(){  tool_clear ();  }, 200); }
 function _ondblclick(who){  if(clickTimer) { window.clearTimeout(clickTimer); clickTimer = null; }  rukou_onclick(who); }
 
-//alert(window.innerWidth+'/'+window.innerHeight);
-</script>
 
-
-<style id="id_men_class"> 
-  
-  .bolck{}
-  .class_box{left:0px;right:0px;top:0px;bottom:0px;height:100%;width:100%;z-index:-1;border-radius:0px 0px 0px 0px;border:0px solid #ffffff;background:rgba(00,00,00,0);color:rgba(00,00,00,0);display:block;}
-  
-  .class_box_beijing {absolute:absolute;position:fixed;left:0px;right:0px;top:0px;bottom:0px;height:;width:;z-index:0;border-radius:0px 0px 0px 0px;border:0px solid #ffffff;background:rgba(00,00,00,1);color:rgba(00,00,00,1);display:block;}
-  .class_box_form {background:rgba(0,0,0,1);background-size:100%;color:rgba(255,255,255,1);}
-  .class_box_yaogan{absolute:absolute;position:fixed;min-left:5px;min-right:5px;min-top:5px;min-bottom:5px;max-height:50%;max-width:90%;z-index:11;border-radius:5px;border:0px solid rgba(250,250,250,0);box-shadow: 1px 2px 3px rgba(230,230,230,1);background:rgba(0,0,0,0);color:rgba(00,00,00,1);overflow:auto;display:block;}
-  .class_box_text,.class_iframe_data,.class_anjian_tijiao,.class_tool,.class_tool_add,.class_tool_textarea,.class_add_data,.class_add_iframe_data{position:relative;   left:;right:;top:;bottom:;height:;width:;max-width:96%;z-index:1;border-radius:5px 5px 5px 5px;border:2px solid rgba(250,250,250,0);margin:3px;box-shadow: 1px 2px 3px rgba(200,200,200,1);background:rgba(00,00,00,1);color:rgba(255,255,255,1);outline:none;line-height: 15px;font-size:13px;overflow:auto;resize:none;display:block;}
-  .class_box_draw{absolute:absolute;position:fixed;z-index:9;border-radius:5px;border:0px solid rgba(250,250,250,0);box-shadow: 1px 2px 3px rgba(230,230,230,1);background:rgba(0,0,0,0);color:rgba(00,00,00,1);overflow:auto;display:block;}
-  
-  /*参考籍https://segmentfault.com/a/1190000041400360*/
-  :root{ --tishi-color: rgba(255,000,000,1); }
-  .class_tool:hover{ color: var(--tishi-color); box-shadow: 1px 2px 3px rgba(255,000,000,1); }
-
-  .class_tool_add{left:;z-index:2;max-width:calc(96%); margin:3px 3px 3px 3px; pointer-events:auto;}
-  .class_form,.class_anjian_tijiao{display:none;}
-  .class_iframe_data{background:rgba(50,50,50,1);display:none;}
-  .class_box_add{absolute:absolute;position:fixed; left:1%;right:1%;top:1%;min-bottom:1%;max-height:98%;width:98%;background:rgba(0,0,0,0);color:rgba(0,0,0,0);overflow:auto;display:block;}
-  .class_add_data{absolute:absolute;left:0%;right:0%;height:400px;width:100%;z-index:1;border-width: 0px 0px 0px 0px;border-style:solid;border-color: rgba(250,250,250,1);box-shadow:1px 2px 3px rgba(255,255,255,0);background:rgba(00,00,00,1);color:rgba(250,250,250,0.6);resize:none;pointer-events:auto;}
-  .class_add_iframe_data{z-index:1;margin:0px;height:calc(90vh);width:calc(96vw);max-width:100%;border-width:0px;box-shadow:0px 0px 0px rgb(200,200,200,0);pointer-events:auto;}
-
-
-  ::-webkit-scrollbar{ display: none; /* Chrome Safari */} 
-
-</style>
